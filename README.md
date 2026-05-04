@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# TaskFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TaskFlow is a modern, responsive task management application built with **React**, **Tailwind CSS**, and **Supabase**. It demonstrates a multi-layered authentication system and real-time database interactions[cite: 1].
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+*   **Triple-Auth System**: Access the dashboard via an Admin Passcode, standard Email/Password, or as a Guest[cite: 1].
+*   **Role-Based Access (RBAC)**: Supports "Admin" and "Guest" roles with dynamic UI changes and permission gating[cite: 1].
+*   **Real-Time Tasks**: Create, toggle completion status, and delete tasks with instant UI updates[cite: 1].
+*   **Status Indicators**: Uses a custom color-coding system where **Yellow** indicates "Wait/Incomplete" and **Green** indicates "Done/Complete"[cite: 1].
+*   **Mobile-First Design**: A centered, responsive layout optimized for both desktop and mobile screens[cite: 1].
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Frontend**: React (TypeScript)[cite: 1]
+*   **Styling**: Tailwind CSS[cite: 1]
+*   **Backend/Auth**: Supabase[cite: 1]
+*   **Environment Management**: Vite[cite: 1]
 
-## Expanding the ESLint configuration
+## 🔑 Authentication Modes
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Admin Passcode**: Enter a specific numeric or text code (configured via `.env`) to automatically sign in with administrative credentials[cite: 1].
+2.  **Email Login**: Standard secure login using Supabase Authentication[cite: 1].
+3.  **Guest Mode**: Allows users to view the task list without an account, though they cannot add or modify tasks[cite: 1].
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ⚙️ Setup
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Clone the repo**:
+    ```bash
+    git clone [https://github.com/yangsampson/taskflow.git](https://github.com/yangsampson/taskflow.git)
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3.  **Environment Variables**:
+    Create a `.env` file in the root and add your Supabase and Admin credentials:
+    
+```env
+    VITE_SUPABASE_URL=your_url
+    VITE_SUPABASE_ANON_KEY=your_key
+    VITE_ADMIN_PASSCODE=your_secret_passcode
+    VITE_ADMIN_EMAIL=admin@example.com
+    VITE_ADMIN_PASSWORD=admin_password
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4.  **Run the app**:
+    ```bash
+    npm run dev
+    ```
