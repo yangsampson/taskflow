@@ -2,28 +2,28 @@
 
 https://taskflow-teal-five.vercel.app/
 
-TaskFlow is a modern, responsive task management application built with **React**, **Tailwind CSS**, and **Supabase**. It demonstrates a multi-layered authentication system and real-time database interactions[cite: 1].
+TaskFlow is a modern, responsive task management application built with **React**, **Tailwind CSS**, and **Supabase**. It demonstrates a multi-layered authentication system and real-time database interactions.
 
 ## 🚀 Features
 
-*   **Triple-Auth System**: Access the dashboard via an Admin Passcode, standard Email/Password, or as a Guest[cite: 1].
-*   **Role-Based Access (RBAC)**: Supports "Admin" and "Guest" roles with dynamic UI changes and permission gating[cite: 1].
-*   **Real-Time Tasks**: Create, toggle completion status, and delete tasks with instant UI updates[cite: 1].
+*   **Triple-Auth System**: Access the dashboard via an Admin Passcode, standard Email/Password, or as a Guest.
+*   **Role-Based Access (RBAC)**: Supports "Admin" and "Guest" roles with dynamic UI changes and permission gating.
+*   **Real-Time Tasks**: Create, toggle completion status, and delete tasks with instant UI updates.
 *   **Status Indicators**: Uses a custom color-coding system where **Yellow** indicates "Wait/Incomplete" and **Green** indicates "Done/Complete"[cite: 1].
-*   **Mobile-First Design**: A centered, responsive layout optimized for both desktop and mobile screens[cite: 1].
+*   **Mobile-First Design**: A centered, responsive layout optimized for both desktop and mobile screens.
 
 ## 🛠️ Tech Stack
 
-*   **Frontend**: React (TypeScript)[cite: 1]
-*   **Styling**: Tailwind CSS[cite: 1]
-*   **Backend/Auth**: Supabase[cite: 1]
-*   **Environment Management**: Vite[cite: 1]
+*   **Frontend**: React (TypeScript)
+*   **Styling**: Tailwind CSS
+*   **Backend/Auth**: Supabase
+*   **Environment Management**: Vite
 
 ## 🔑 Authentication Modes
 
-1.  **Admin Passcode**: Enter a specific numeric or text code (configured via `.env`) to automatically sign in with administrative credentials[cite: 1].
-2.  **Email Login**: Standard secure login using Supabase Authentication[cite: 1].
-3.  **Guest Mode**: Allows users to view the task list without an account, though they cannot add or modify tasks[cite: 1].
+1.  **Admin Passcode**: Enter a specific numeric or text code (configured via `.env`) to automatically sign in with administrative credentials.
+2.  **Email Login**: Standard secure login using Supabase Authentication.
+3.  **Guest Mode**: Allows users to view the task list without an account, though they cannot add or modify tasks.
 
 ## ⚙️ Setup
 
