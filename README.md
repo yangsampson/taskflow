@@ -9,7 +9,7 @@ TaskFlow is a modern, responsive task management application built with **React*
 *   **Triple-Auth System**: Access the dashboard via an Admin Passcode, standard Email/Password, or as a Guest.
 *   **Role-Based Access (RBAC)**: Supports "Admin" and "Guest" roles with dynamic UI changes and permission gating.
 *   **Real-Time Tasks**: Create, toggle completion status, and delete tasks with instant UI updates.
-*   **Status Indicators**: Uses a custom color-coding system where **Yellow** indicates "Wait/Incomplete" and **Green** indicates "Done/Complete"[cite: 1].
+*   **Status Indicators**: Uses a custom color-coding system where **Yellow** indicates "Wait/Incomplete" and **Green** indicates "Done/Complete".
 *   **Mobile-First Design**: A centered, responsive layout optimized for both desktop and mobile screens.
 
 ## 🛠️ Tech Stack
